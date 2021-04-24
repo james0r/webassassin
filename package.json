@@ -1,0 +1,33 @@
+{
+  "name": "web-assassin-boilerplate",
+  "version": "1.0.0",
+  "description": "Webpack boilerplate template that includes Alpine.js, Sass compilation",
+  "private": true,
+  "scripts": {
+    "dev": "webpack serve --config config/webpack.config.dev.js",
+    "build": "webpack --config config/webpack.config.prod.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "copy-webpack-plugin": "^8.1.1",
+    "css-loader": "^5.2.4",
+    "cssnano": "^5.0.1",
+    "mini-css-extract-plugin": "^1.5.0",
+    "postcss-loader": "^5.2.0",
+    "sass": "^1.32.11",
+    "sass-loader": "^11.0.1",
+    "style-loader": "^2.0.0",
+    "terser-webpack-plugin": "^5.1.1",
+    "webpack": "^5.35.1",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.7.3"
+  },
+  "dependencies": {
+    "alpinejs": "^2.8.2",
+    "http-server": "^0.12.3"
+  }
+}
