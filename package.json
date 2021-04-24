@@ -1,5 +1,5 @@
 {
-  "name": "web-assassin-boilerplate",
+  "name": "web-assassin-alpinejs-boilerplate",
   "version": "1.0.0",
   "description": "Webpack boilerplate template that includes Alpine.js, Sass compilation",
   "private": true,

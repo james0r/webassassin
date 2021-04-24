@@ -1,6 +1,6 @@
 export default {
-  money_without_trailing_zeros(money) {
-    return "$" + money / 100;
+  randomNumber (min = 0, max = 1000) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
   }
 
   // Add your helper functions here to be available on the window[namespace]

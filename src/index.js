@@ -3,17 +3,6 @@ import './styles/style.css'
 import './styles/style.scss'
 import helpers from './scripts/helpers.js'
 
-function component() {
-  const element = document.createElement('div')
-
-  element.innerHTML = 'Hello Web Assassins!'
-  element.classList.add('hello')
-
-  return element
-}
-
-document.body.appendChild(component())
-
 // Declare our namespace on the window
 const namespace = 'webassassin'
 
