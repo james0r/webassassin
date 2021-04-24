@@ -3,5 +3,5 @@ export default {
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
 
-  // Add your helper functions here to be available on the window[namespace]
+  // Add your helper functions here to be available on window[namespace]
 }

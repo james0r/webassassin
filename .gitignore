@@ -29,3 +29,6 @@ tmp/
 
 # Brunch output folder.
 public/
+
+# Config
+.prettierrc

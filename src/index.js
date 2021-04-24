@@ -10,12 +10,12 @@ window[namespace] = {
   helpers: {}
 }
 
-// Map helper functions to the window
+// Map helper functions to window[namespace].helpers
 for (const [key, value] of Object.entries(helpers)) {
   window[namespace].helpers[key] = value
 }
 
-// map alpine components from components dir to window
+// Map alpine components from components directory to window[namespace].components
 window[namespace].components = {}
 
 const alpineComponents = require.context('./scripts/components/', true, /\.js$/)
@@ -23,7 +23,7 @@ const alpineComponents = require.context('./scripts/components/', true, /\.js$/)
 alpineComponents.keys().forEach((key) => {
   const component = alpineComponents(key).default
 
-  // if a component has a name defined use the name, else use the path as the component name
+  // If a component has a name defined use the name, otherwise use the path as the component name
   const name = component.name
     ? component.name
     : key
