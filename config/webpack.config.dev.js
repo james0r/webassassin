@@ -1,12 +1,12 @@
-const webpack = require('webpack');
-const { merge } = require('webpack-merge');
-const common = require('./webpack.config.common.js');
-const path = require('path');
+const webpack = require('webpack')
+const { merge } = require('webpack-merge')
+const common = require('./webpack.config.common.js')
+const path = require('path')
 
 module.exports = merge(common, {
   mode: 'development',
   devServer: {
-    contentBase: path.resolve(__dirname, '../dist'),
+    contentBase: path.resolve(__dirname, '../src/public/'),
     watchContentBase: true,
     hot: true,
     open: true,
@@ -17,13 +17,13 @@ module.exports = merge(common, {
     rules: [
       {
         test: /\.(sass|scss)$/,
-        use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
+        use: ['style-loader', 'css-loader', 'sass-loader']
       },
       {
         test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
+        use: ['style-loader', 'css-loader']
       }
-    ],
+    ]
   },
-  plugins: [new webpack.HotModuleReplacementPlugin()],
-});
+  plugins: [new webpack.HotModuleReplacementPlugin()]
+})

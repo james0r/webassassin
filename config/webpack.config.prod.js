@@ -1,9 +1,11 @@
-const cssnano = require('cssnano');
 const { merge } = require('webpack-merge');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const common = require('./webpack.config.common.js');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+const path = require('path')
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 module.exports = merge(common, {
   mode: 'production',
@@ -14,6 +16,7 @@ module.exports = merge(common, {
       new TerserPlugin({
         extractComments: false,
       }),
+      new CssMinimizerPlugin()
     ],
   },
   module: {
@@ -45,6 +48,19 @@ module.exports = merge(common, {
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: 'bundle.css',
-    })
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        { 
+          from: "../src/public/", 
+          to: "../dist/" ,
+          context: "config/",
+        },
+      ],
+    }),
   ],
+  output: {
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, '../dist'),
+  }
 });

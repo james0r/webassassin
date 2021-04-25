@@ -1,3 +1,4 @@
+import '@ryangjchandler/spruce'
 import 'alpinejs'
 import './styles/style.css'
 import './styles/style.scss'
@@ -32,3 +33,9 @@ alpineComponents.keys().forEach((key) => {
 
   window[namespace].components[name] = component.component
 })
+
+// Add some data to our state management library
+// https://spruce.ryangjchandler.co.uk/quick-start
+Spruce.store('success', {
+  message: '✅ Spruce state managament is armed and ready.',
+});

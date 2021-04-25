@@ -14,7 +14,7 @@
     "clean-webpack-plugin": "^4.0.0-alpha.0",
     "copy-webpack-plugin": "^8.1.1",
     "css-loader": "^5.2.4",
-    "cssnano": "^5.0.1",
+    "css-minimizer-webpack-plugin": "^2.0.0",
     "mini-css-extract-plugin": "^1.5.0",
     "postcss-loader": "^5.2.0",
     "sass": "^1.32.11",
@@ -27,6 +27,7 @@
     "webpack-merge": "^5.7.3"
   },
   "dependencies": {
+    "@ryangjchandler/spruce": "^2.6.3",
     "alpinejs": "^2.8.2",
     "http-server": "^0.12.3"
   }
