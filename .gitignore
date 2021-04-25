@@ -28,8 +28,8 @@ node_modules/
 tmp/
 
 # Brunch output folder.
-public/
 dist/
 
 # Config
 .prettierrc
+.vscode

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Web Assassin Alpine.js Boilderplate</title>
+    <link rel="stylesheet" href="bundle.css" />
+  </head>
+  <body>
+
+    <img src="./assets/sample.jpeg" alt="">
+    <!-- This style tag should be removed during development -->
+    <style>
+      body {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .web-assassin-title {
+        text-align: center;
+        font-family: fantasy;
+      }
+
+      .web-assassin-alpinejs-status {
+        display: block;
+        text-align: center;
+        margin-top: 1rem;
+        font-family: monospace;
+      }
+    </style>
+
+    <!-- This h1 tag should be removed during development -->
+    <h1 class="web-assassin-title">
+      🥷🏻 Web Assassin == Alpine.js Boilerplate
+    </h1>
+
+    <!-- This small tag should be removed during development -->
+    <small
+      x-data="{ alpineStatus: '✅ Alpine.js is locked and loaded.' }"
+      x-init="$el.innerHTML = alpineStatus"
+      class="web-assassin-alpinejs-status"
+      >❌ There is a problem loading Alpine.js :(
+    </small>
+
+    <!-- This small tag should be removed during development -->
+    <small
+      x-data
+      x-init="$el.innerHTML = $store.success.message"
+      class="web-assassin-spruce-status"
+      >❌ There is a problem loading Spruce :(
+    </small>
+
+    <a href="/page.html">Another Page</a>
+
+    <script src="bundle.js"></script>
+  </body>
+</html>

@@ -18,7 +18,9 @@ This is there to avoid collisions with other libraries. Change it to something u
 
 ### Add Alpine.js Components
 
-To add a new Alpine.js component, navigate to `src/scripts/components` and create a `.js` file and inside it export a default objecct with
+To add a new Alpine.js component, navigate to `src/scripts/components` and create a `.js` file.
+Inside it export a default object containing
 
-- A name key/value pair
-- A function called `component()` that returns the guts of your Alpine.js component per their specs
+- A `name` key where you will assign whatever name you want to your component.
+> If you omit a name key, your filename will be formatted and used as your component name.
+- A function called `component()` that returns the component logic of your Alpine.js component per their [specs](https://github.com/alpinejs/alpine#x-data).
