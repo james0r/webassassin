@@ -11,5 +11,7 @@ Webpack based boilerplate starter template including Alpine.js and Sass/Scss com
 
 ### Change the namespace
 In `src/index.js` you'll see </br>
-`const namespace = 'webassassin'` </br> 
+```javascript
+const namespace = 'webassassin'
+```
 This is there to avoid collisions with other libraries. Change it to something uniquely yours if you prefer.
