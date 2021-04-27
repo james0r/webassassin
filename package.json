@@ -10,25 +10,26 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "clean-webpack-plugin": "^4.0.0-alpha.0",
-    "copy-webpack-plugin": "^8.1.1",
-    "css-loader": "^5.2.4",
-    "css-minimizer-webpack-plugin": "^2.0.0",
-    "mini-css-extract-plugin": "^1.5.0",
-    "postcss-loader": "^5.2.0",
-    "sass": "^1.32.11",
-    "sass-loader": "^11.0.1",
-    "style-loader": "^2.0.0",
-    "terser-webpack-plugin": "^5.1.1",
-    "webpack": "^5.35.1",
-    "webpack-cli": "^4.6.0",
-    "webpack-dev-server": "^3.11.2",
-    "webpack-merge": "^5.7.3"
-  },
   "dependencies": {
     "@ryangjchandler/spruce": "^2.6.3",
-    "alpinejs": "^2.8.2",
-    "http-server": "^0.12.3"
+    "alpinejs": "^2.8.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.16",
+    "autoprefixer": "^9.0.0",
+    "babel-loader": "^8.2.2",
+    "browser-sync": "^2.26.14",
+    "cssnano": "^5.0.1",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-eslint": "^6.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "postcss": "^8.2.13",
+    "webpack-stream": "^6.1.2"
   }
 }

@@ -1,8 +1,6 @@
 import '@ryangjchandler/spruce'
 import 'alpinejs'
-import './styles/style.css'
-import './styles/style.scss'
-import helpers from './scripts/helpers.js'
+import helpers from './helpers.js'
 
 // Declare our namespace on the window
 const namespace = 'webassassin'
@@ -19,7 +17,7 @@ for (const [key, value] of Object.entries(helpers)) {
 // Map alpine components from components directory to window[namespace].components
 window[namespace].components = {}
 
-const alpineComponents = require.context('./scripts/components/', true, /\.js$/)
+const alpineComponents = require.context('./components/', true, /\.js$/)
 
 alpineComponents.keys().forEach((key) => {
   const component = alpineComponents(key).default
@@ -36,6 +34,6 @@ alpineComponents.keys().forEach((key) => {
 
 // Add some data to our state management library
 // https://spruce.ryangjchandler.co.uk/quick-start
-Spruce.store('success', {
+window.Spruce.store('success', {
   message: '✅ Spruce state managament is armed and ready.',
 });
