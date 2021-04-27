@@ -4,8 +4,9 @@
   "description": "Webpack boilerplate template that includes Alpine.js, Sass compilation",
   "private": true,
   "scripts": {
-    "dev": "webpack serve --config config/webpack.config.dev.js",
-    "build": "webpack --config config/webpack.config.prod.js"
+    "dev": "gulp watch",
+    "watch": "gulp watch",
+    "build": "gulp build"
   },
   "keywords": [],
   "author": "",
